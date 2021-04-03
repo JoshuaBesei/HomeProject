@@ -3,9 +3,7 @@ package com.example.homeproject
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.homeproject.fragments.AccountFragment
-import com.example.homeproject.fragments.HomeFragment
-import com.example.homeproject.fragments.LeaderBoardsFragment
+import com.example.homeproject.fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +14,8 @@ class MainActivity : AppCompatActivity() {
         val homeFragment = HomeFragment()
         val account = AccountFragment()
         val leaderboards = LeaderBoardsFragment()
+        val completedTasks = CompletedTasksFragment()
+        val addTasks = AddTasksFragment()
 
         makeCurrentFragment(homeFragment)
 
@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.home -> makeCurrentFragment(homeFragment)
                 R.id.account -> makeCurrentFragment(account)
                 R.id.leaderboards -> makeCurrentFragment(leaderboards)
+                R.id.completedTasks -> makeCurrentFragment(completedTasks)
+                R.id.addTasks -> makeCurrentFragment(addTasks)
             }
             true
         }
