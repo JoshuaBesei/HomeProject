@@ -3,4 +3,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="new_task">New Task</string>
+
+    <string name="selected_item">Selected item:</string>
+    <string-array name="TimeZones">
+        <item>UTC+10:00 Canberra, Melbourne, Sydney</item>
+        <item>UTC+10:00 Melbourne, Sydney</item>
+        <item>UTC+10:00 Sydney</item>
+    </string-array>
 </resources>

@@ -2,8 +2,7 @@ package com.example.homeproject
 
 import android.os.Bundle
 import android.view.View
-import android.widget.RadioGroup
-import android.widget.ToggleButton
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.homeproject.R.id.High
@@ -54,6 +53,28 @@ class MainActivity : AppCompatActivity() {
             }
         }*/
 
+        val timeZones = resources.getStringArray(R.array.TimeZones)
+
+        val spinner = findViewById<Spinner>(R.id.timeZoneSpinner)
+        if (spinner != null) {
+            val adapter = ArrayAdapter(this,
+                android.R.layout.simple_spinner_item, timeZones)
+            spinner.adapter = adapter
+
+            spinner.onItemSelectedListener = object :
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(parent: AdapterView<*>,
+                                            view: View, position: Int, id: Long) {
+                    Toast.makeText(this@MainActivity,
+                        getString(R.string.selected_item) + " " +
+                                "" + timeZones[position], Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    // write code to perform some action
+                }
+            }
+        }
     }
 
     private fun makeCurrentFragment(fragment: Fragment) =
