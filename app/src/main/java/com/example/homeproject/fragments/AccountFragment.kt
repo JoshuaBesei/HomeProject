@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.Spinner
+import android.widget.Toast
 import com.example.homeproject.R
+import android.widget.ArrayAdapter as ArrayAdapter
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,14 +32,43 @@ class AccountFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val t=inflater.inflate(R.layout.fragment_account, container, false)
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_account, container, false)
+        val timeZones = resources.getStringArray(R.array.TimeZones)
+
+        // access the spinner
+        val spinner = t.findViewById<Spinner>(R.id.timeZoneSpinner)
+        if (spinner != null) {
+            val adapter = activity?.applicationContext?.let {
+                ArrayAdapter<String>(it,
+                    android.R.layout.simple_spinner_item, timeZones)
+            }
+            spinner.adapter = adapter
+
+            spinner.onItemSelectedListener = object :
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View, position: Int, id: Long,
+                ) {
+                    Toast.makeText(activity?.applicationContext,
+                        " " +
+                                "" + timeZones[position], Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    // write code to perform some action
+                }
+            }
+        }
+        return t
     }
 
     companion object {
