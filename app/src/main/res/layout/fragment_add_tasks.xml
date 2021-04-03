@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.AddTasksFragment">
 
     <RelativeLayout
@@ -14,65 +15,76 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:textSize="40dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/oregano"
             android:text="@string/new_task"
-            android:layout_marginTop="10dp"/>
+            android:textSize="40dp" />
 
         <EditText
             android:id="@+id/editTextTaskName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/new_task_text"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="120dp"
             android:ems="10"
             android:inputType="text|textCapCharacters"
-            android:text="Task Name"
-            android:layout_marginRight="120dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"/>
+            android:text="Task Name" />
 
         <TextView
             android:id="@+id/priority_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
+            android:layout_below="@id/editTextTaskName"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/oregano"
             android:text="Priority"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_below="@id/editTextTaskName"/>
+            android:textSize="30dp" />
 
-        <RadioGroup
-            android:id="@+id/RadioGroupdHL"
-            android:layout_width="match_parent"
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleButtonGroup"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
             android:layout_below="@id/editTextTaskName"
-            android:layout_toRightOf="@id/priority_text"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
+            android:layout_marginTop="18dp"
+            android:layout_toEndOf="@+id/priority_text"
+            android:layout_toRightOf="@+id/priority_text"
+            app:singleSelection="true">
 
-            <ToggleButton
+            <Button
                 android:id="@+id/High"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/oregano"
-                android:textSize="20dp"
-                android:textOn="High"
-                android:textOff="High"
-                android:checked="true"/>
+                android:text="High &#9733;"
+                tools:layout_editor_absoluteX="164dp"
+                tools:layout_editor_absoluteY="167dp" />
 
-            <ToggleButton
+            <Button
                 android:id="@+id/Low"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/oregano"
-                android:textSize="20dp"
-                android:textOn="Low"
-                android:textOff="Low"/>
-        </RadioGroup>
+                android:text="Low"
+                tools:layout_editor_absoluteX="164dp"
+                tools:layout_editor_absoluteY="388dp" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
 
+        <TextView
+            android:id="@+id/text_view_date_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35dp"
+            android:padding="20dp" />
 
+        <Button
+            android:id="@+id/button_date_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Date" />
     </RelativeLayout>
 
 </FrameLayout>
