@@ -1,10 +1,15 @@
 package com.example.homeproject
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.RadioGroup
+import android.widget.ToggleButton
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.homeproject.R.id.High
 import com.example.homeproject.fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,10 +21,13 @@ class MainActivity : AppCompatActivity() {
         val leaderboards = LeaderBoardsFragment()
         val completedTasks = CompletedTasksFragment()
         val addTasks = AddTasksFragment()
+        var checked = "High"
 
         makeCurrentFragment(homeFragment)
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        val toggleButtonHigh = findViewById<ToggleButton>(R.id.High)
+        val toggleButtonLow = findViewById<ToggleButton>(R.id.Low)
 
         bottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId){
@@ -32,6 +40,20 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
+        /*
+        toggleButtonHigh.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                checked = "High"
+            }
+        }*/
+
+        /*
+        toggleButtonLow.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                checked = "Low"
+            }
+        }*/
+
     }
 
     private fun makeCurrentFragment(fragment: Fragment) =
@@ -39,4 +61,5 @@ class MainActivity : AppCompatActivity() {
             replace(R.id.fl_wrapper, fragment)
             commit()
         }
+
 }

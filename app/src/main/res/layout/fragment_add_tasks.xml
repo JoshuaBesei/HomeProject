@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:textSize="40dp"
-            android:fontFamily="@font/Oregano"
+            android:fontFamily="@font/oregano"
             android:text="@string/new_task"
             android:layout_marginTop="10dp"/>
 
@@ -36,12 +36,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30dp"
-            android:fontFamily="@font/Oregano"
+            android:fontFamily="@font/oregano"
             android:text="Priority"
             android:layout_marginTop="20dp"
-            android:layout_marginRight="120dp"
+            android:layout_marginRight="30dp"
             android:layout_marginLeft="30dp"
             android:layout_below="@id/editTextTaskName"/>
+
+        <RadioGroup
+            android:id="@+id/RadioGroupdHL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextTaskName"
+            android:layout_toRightOf="@id/priority_text"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/High"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oregano"
+                android:textSize="20dp"
+                android:textOn="High"
+                android:textOff="High"
+                android:checked="true"/>
+
+            <ToggleButton
+                android:id="@+id/Low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oregano"
+                android:textSize="20dp"
+                android:textOn="Low"
+                android:textOff="Low"/>
+        </RadioGroup>
 
 
     </RelativeLayout>
