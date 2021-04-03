@@ -1,11 +1,15 @@
 package com.example.homeproject
 
 import android.os.Bundle
-import android.widget.Button
+import android.view.View
+import android.widget.RadioGroup
+import android.widget.ToggleButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.homeproject.R.id.High
 import com.example.homeproject.fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,8 +26,8 @@ class MainActivity : AppCompatActivity() {
         makeCurrentFragment(homeFragment)
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        val buttonHigh = findViewById<Button>(R.id.High)
-        val buttonLow = findViewById<Button>(R.id.Low)
+        val toggleButtonHigh = findViewById<ToggleButton>(R.id.High)
+        val toggleButtonLow = findViewById<ToggleButton>(R.id.Low)
 
         bottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId){
@@ -35,6 +39,20 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+
+        /*
+        toggleButtonHigh.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                checked = "High"
+            }
+        }*/
+
+        /*
+        toggleButtonLow.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                checked = "Low"
+            }
+        }*/
 
     }
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,10 +11,75 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Account" />
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/oregano"
+            android:textSize="40dp"
+            android:text="Profile" />
+
+        <ImageView
+            android:id="@+id/icon_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/profile"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/profile"
+            app:srcCompat="@drawable/ic_person_profile_foreground" />
+
+        <EditText
+            android:id="@+id/editProfileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile"
+            android:layout_toRightOf="@+id/icon_profile"
+            android:ems="10"
+            android:inputType="text|textCapCharacters"
+            android:text="Full Name"
+            android:layout_marginRight="120dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/editDisplayName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editProfileName"
+            android:layout_toRightOf="@+id/icon_profile"
+            android:ems="10"
+            android:inputType="text|textCapCharacters"
+            android:text="Display Name"
+            android:layout_marginRight="120dp"
+            android:layout_marginLeft="30dp"
+            />
+
+        <TextView
+            android:id="@+id/timeZone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/oregano"
+            android:layout_below="@id/icon_profile"
+            android:layout_marginLeft="10dp"
+            android:textSize="40dp"
+            android:text="Time Zone" />
+
+        <Spinner
+            android:id="@+id/timeZoneSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            android:layout_below="@+id/timeZone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text=""/>
 
     </RelativeLayout>
 
