@@ -10,4 +10,19 @@
         <item>UTC+10:00 Melbourne, Sydney</item>
         <item>UTC+10:00 Sydney</item>
     </string-array>
+
+    <!--TASKS-->
+    <string name="task1">I am strong.</string>
+    <string name="task2">I believe in myself.</string>
+    <string name="task3">Each day is a new opportunity to grow and be a better version of myself.</string>
+    <string name="task4">Every challenge in my life is an opportunity to learn from.</string>
+    <string name="task5">I have so much to be grateful for.</string>
+
+    <!--DESCRIPTION-->
+    <string name="description1">I am strong.</string>
+    <string name="description2">I believe in myself.</string>
+    <string name="description3">Each day is a new opportunity to grow and be a better version of myself.</string>
+    <string name="description4">Every challenge in my life is an opportunity to learn from.</string>
+    <string name="description5">I have so much to be grateful for.</string>
+
 </resources>

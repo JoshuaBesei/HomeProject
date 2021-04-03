@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.example.homeproject.R
+import com.example.homeproject.fragments.adapter.ItemAdapter
+import com.example.homeproject.fragments.data.Datasource
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,8 +38,18 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val t = inflater.inflate(R.layout.fragment_home, container, false)
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        // Initialize data.
+        val myDataset = Datasource().loadTasks()
+
+        val recyclerView = t.findViewById<RecyclerView>(R.id.recycler_view)
+        recyclerView.adapter = activity?.applicationContext?.let { ItemAdapter(it, myDataset) }
+
+        // Use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        recyclerView.setHasFixedSize(true)
+        return t
     }
 
     companion object {
