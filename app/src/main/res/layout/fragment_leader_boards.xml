@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,10 +11,105 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/leaderBoard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="LeaderBoards" />
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/oregano"
+            android:textSize="40sp"
+            android:text="Leader Board"/>
+
+        <ImageView
+            android:id="@+id/icon_profile1st"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/leaderBoard"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/ic_person_profile_foreground"/>
+
+        <TextView
+            android:id="@+id/leader_rectangle_first"
+            android:background="@drawable/leader_rectangle_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/icon_profile1st"
+            />
+
+        <ImageView
+            android:id="@+id/icon_profile2nd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/leaderBoard"
+            android:layout_toLeftOf="@id/icon_profile1st"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/ic_person_profile_foreground"/>
+
+        <TextView
+            android:id="@+id/leader_rectangle_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_profile2nd"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="14dp"
+            android:layout_toLeftOf="@id/icon_profile1st"
+            android:background="@drawable/leader_rectangle_second" />
+
+        <ImageView
+            android:id="@+id/icon_profile3rd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/leaderBoard"
+            android:layout_toRightOf="@id/icon_profile1st"
+            android:layout_marginTop="60dp"
+            app:srcCompat="@drawable/ic_person_profile_foreground"/>
+
+        <TextView
+            android:id="@+id/leader_rectangle_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_profile3rd"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@id/icon_profile1st"
+            android:background="@drawable/leader_rectangle_third" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/leader_rectangle_first"
+            android:layout_marginTop="4dp"
+            android:text="Most task accomplished today!"
+            android:textSize="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/arrowLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/leaderBoard"
+            android:layout_toLeftOf="@id/icon_profile2nd"
+            android:layout_marginTop="100dp"
+            app:srcCompat="@drawable/ic_arrow_left"/>
+
+        <ImageView
+            android:id="@+id/arrowRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/leaderBoard"
+            android:layout_toRightOf="@id/icon_profile3rd"
+            android:layout_marginTop="100dp"
+            app:srcCompat="@drawable/ic_arrow_right"/>
 
     </RelativeLayout>
 
