@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "234602365129",
+    "project_id": "hackiethon-752d2",
+    "storage_bucket": "hackiethon-752d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234602365129:android:c018898acf80851fee8d18",
+        "android_client_info": {
+          "package_name": "com.example.homeproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234602365129-stf9cb9s61gmnjeg1c8k9rpjfbqnm82v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdWSYAK-piTodfgwKqCVFlzKznotVYd0Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "234602365129-stf9cb9s61gmnjeg1c8k9rpjfbqnm82v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
