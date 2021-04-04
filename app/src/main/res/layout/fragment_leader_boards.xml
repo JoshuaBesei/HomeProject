@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,10 +11,391 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/leaderBoard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="LeaderBoards" />
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/oregano"
+            android:textSize="40sp"
+            android:text="Leader Board"/>
+
+        <ImageView
+            android:id="@+id/icon_profile1st"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/leaderBoard"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/ic_person_profile_foreground"/>
+
+        <TextView
+            android:id="@+id/leader_rectangle_first"
+            android:background="@drawable/leader_rectangle_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/icon_profile1st"
+            />
+
+        <ImageView
+            android:id="@+id/icon_profile2nd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/leaderBoard"
+            android:layout_toLeftOf="@id/icon_profile1st"
+            android:layout_marginTop="50dp"
+            app:srcCompat="@drawable/ic_person_profile_foreground"/>
+
+        <TextView
+            android:id="@+id/leader_rectangle_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_profile2nd"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="14dp"
+            android:layout_toLeftOf="@id/icon_profile1st"
+            android:background="@drawable/leader_rectangle_second" />
+
+        <ImageView
+            android:id="@+id/icon_profile3rd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/leaderBoard"
+            android:layout_toRightOf="@id/icon_profile1st"
+            android:layout_marginTop="80dp"
+            app:srcCompat="@drawable/ic_person_profile_foreground"/>
+
+        <TextView
+            android:id="@+id/leader_rectangle_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_profile3rd"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@id/icon_profile1st"
+            android:background="@drawable/leader_rectangle_third" />
+
+        <TextView
+            android:id="@+id/leader_board_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/leaderBoard"
+            android:layout_marginTop="4dp"
+            android:text="Most task accomplished today!"
+            android:textSize="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/arrowLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/leaderBoard"
+            android:layout_toLeftOf="@id/icon_profile2nd"
+            android:layout_marginTop="100dp"
+            app:srcCompat="@drawable/ic_arrow_left"/>
+
+        <ImageView
+            android:id="@+id/arrowRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/leaderBoard"
+            android:layout_toRightOf="@id/icon_profile3rd"
+            android:layout_marginTop="100dp"
+            app:srcCompat="@drawable/ic_arrow_right"/>
+
+        <ImageView
+            android:id="@+id/task_accomplished"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/leader_rectangle_first"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/custom_rectangle_most_task_accomplished"
+            />
+
+        <ImageView
+            android:id="@+id/task_accomplished_rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/leader_rectangle_first"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/leader_most_task_accomplished_rounded"
+            />
+
+        <ImageView
+            android:id="@+id/task_accomplished_not_rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/leader_rectangle_first"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/leader_most_task_accomplished"
+            />
+
+        <TextView
+            android:id="@+id/task_accomplished_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/leader_rectangle_first"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:text="Most task accomplished today"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:id="@+id/individual_task_accomplished1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/task_accomplished_text"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/individual_rectangle_leaderboard_other"
+            />
+
+        <ImageView
+            android:id="@+id/individual_task_accomplished_profile1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/task_accomplished_text"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/individual_task_profile"
+            />
+
+        <TextView
+            android:id="@+id/task_accomplish_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/task_accomplished_text"
+            android:layout_toRightOf="@id/individual_task_accomplished_profile1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="1dp"
+            android:text="Joe"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:id="@+id/task_accomplish_task1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/task_accomplished_text"
+            android:layout_toRightOf="@id/individual_task_accomplished_profile1"
+            android:layout_marginLeft="230dp"
+            android:layout_marginTop="1dp"
+            android:text="50 Tasks"
+            android:textSize="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/individual_task_accomplished2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/individual_task_accomplished1"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/individual_rectangle_leaderboard_other"
+            />
+
+        <ImageView
+            android:id="@+id/individual_task_accomplished_profile2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/individual_task_accomplished_profile1"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/individual_task_profile"
+            />
+
+        <TextView
+            android:id="@+id/task_accomplish_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/task_accomplish_name1"
+            android:layout_toRightOf="@id/individual_task_accomplished_profile2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:text="Josh"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:id="@+id/task_accomplish_task2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/task_accomplish_name1"
+            android:layout_toRightOf="@id/individual_task_accomplished_profile2"
+            android:layout_marginLeft="230dp"
+            android:layout_marginTop="1dp"
+            android:text="41 Tasks"
+            android:textSize="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/individual_task_accomplished3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/individual_task_accomplished2"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/individual_rectangle_leaderboard_other"
+            />
+
+        <ImageView
+            android:id="@+id/individual_task_accomplished_profile3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/individual_task_accomplished_profile2"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/individual_task_profile"
+            />
+
+        <TextView
+            android:id="@+id/task_accomplish_name3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/task_accomplish_name2"
+            android:layout_toRightOf="@id/individual_task_accomplished_profile3"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:text="Aldric"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:id="@+id/task_accomplish_task3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/task_accomplish_name2"
+            android:layout_toRightOf="@id/individual_task_accomplished_profile3"
+            android:layout_marginLeft="230dp"
+            android:layout_marginTop="1dp"
+            android:text="36 Tasks"
+            android:textSize="20dp"
+            />
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:id="@+id/individual_task_accomplished4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/individual_task_accomplished3"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/individual_rectangle_leaderboard_you"
+            />
+
+        <ImageView
+            android:id="@+id/individual_task_accomplished_profile4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/individual_task_accomplished_profile3"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/individual_task_profile"
+            />
+
+        <TextView
+            android:id="@+id/task_accomplish_name4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/task_accomplish_name3"
+            android:layout_toRightOf="@id/individual_task_accomplished_profile4"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="7dp"
+            android:text="You"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:id="@+id/task_accomplish_task4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/task_accomplish_name3"
+            android:layout_toRightOf="@id/individual_task_accomplished_profile4"
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="7dp"
+            android:text="7 Tasks"
+            android:textSize="20dp"
+            />
+
+
+        <ImageView
+
+            android:id="@+id/individual_task_accomplished5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/individual_task_accomplished4"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/individual_rectangle_leaderboard_other"
+            />
+
+        <ImageView
+            android:id="@+id/individual_task_accomplished_profile5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/individual_task_accomplished_profile4"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="7dp"
+            app:srcCompat="@drawable/individual_task_profile"
+            />
+
+        <TextView
+            android:id="@+id/task_accomplish_name5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/task_accomplish_name4"
+            android:layout_toRightOf="@id/individual_task_accomplished_profile5"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="1dp"
+            android:text="Jacq"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:id="@+id/task_accomplish_task5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_below="@id/task_accomplish_name4"
+            android:layout_toRightOf="@id/individual_task_accomplished_profile5"
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="3dp"
+            android:text="3 Tasks"
+            android:textSize="20dp"
+            />
 
     </RelativeLayout>
 
