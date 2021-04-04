@@ -76,6 +76,17 @@
 
         </com.google.android.material.button.MaterialButtonToggleGroup>
 
+        <TextView
+            android:id="@+id/selectedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:layout_below="@id/toggleButtonGroup"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="25dp"
+            android:text="Due Date DD-MM-YYYY"
+            android:textColor="#DBD8D8"/>
+
         <ImageButton
             android:id="@+id/selectDate"
             android:layout_width="wrap_content"
@@ -91,15 +102,22 @@
             android:clickable="true" />
 
         <TextView
-            android:id="@+id/selectedDate"
+            android:id="@+id/selectedTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="22sp"
-            android:layout_below="@id/toggleButtonGroup"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="25dp"
-            android:text="Due Date DD-MM-YYYY"
-            android:textColor="#DBD8D8"/>
+            android:layout_marginRight="20dp"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:text="00:00"
+            android:layout_below="@id/selectedDate" />
+
+        <Button
+            android:id="@+id/selectTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Time"
+            android:layout_below="@id/selectDate"
+            android:layout_marginLeft="100dp"/>
     </RelativeLayout>
 
 </FrameLayout>

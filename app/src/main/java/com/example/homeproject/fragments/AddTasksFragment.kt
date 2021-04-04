@@ -1,15 +1,20 @@
 package com.example.homeproject.fragments
 
+import android.app.AlertDialog
 import android.app.DatePickerDialog
+import android.app.TimePickerDialog
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
+import android.text.format.DateFormat.is24HourFormat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
 import com.example.homeproject.R
+import java.text.DateFormat
+import java.text.SimpleDateFormat
 import java.util.*
 
 
@@ -56,11 +61,25 @@ class AddTasksFragment : Fragment() {
                 }
             }, year, month, day)
         };
-
-
         val selectDate = v.findViewById<ImageButton>(R.id.selectDate)
         selectDate.setOnClickListener({ v ->
             datePicker?.show()
+        })
+
+        val mPickTimeBtn = v.findViewById<Button>(R.id.selectTime)
+        val textView     = v.findViewById<TextView>(R.id.selectedTime)
+
+        val hour = mcurrentTime.get(Calendar.HOUR)
+        val minute = mcurrentTime.get(Calendar.MINUTE)
+        val timePicker = context?.let {
+            TimePickerDialog(it, R.style.CustomDatePickerDialog,  object : TimePickerDialog.OnTimeSetListener {
+                override fun onTimeSet(view: TimePicker?, hour: Int, minute: Int) {
+                    textView.setText(String.format("%d : %d", hour, minute))
+                }
+            }, hour, minute, true)
+        };
+        mPickTimeBtn.setOnClickListener({ v ->
+            timePicker?.show()
         })
         return v
     }
