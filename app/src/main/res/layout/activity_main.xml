@@ -23,5 +23,4 @@
         app:itemTextColor="#000"
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/nav_menu" />
-
 </RelativeLayout>
