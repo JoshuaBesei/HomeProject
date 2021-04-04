@@ -81,6 +81,71 @@
             android:layout_marginRight="10dp"
             android:text=""/>
 
+        <TextView
+            android:id="@+id/account_rectangle1"
+            android:background="@drawable/custom_account_rectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timeZoneSpinner"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/oregano"
+            android:text="Tasks \n\n 5 \n\n Accomplished \n Today"
+            android:gravity="top|center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:paddingTop="15dp"
+            />
+
+        <TextView
+            android:id="@+id/account_rectangle2"
+            android:background="@drawable/custom_account_rectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timeZoneSpinner"
+            android:layout_toRightOf="@id/account_rectangle1"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/oregano"
+            android:text="Break Tasks \n\n 3 \n\n Accomplished \n Today"
+            android:gravity="top|center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:paddingTop="15dp"
+            />
+
+        <TextView
+            android:id="@+id/account_rectangle3"
+            android:background="@drawable/custom_account_rectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/account_rectangle1"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/oregano"
+            android:text="Tasks \n\n 5 \n\n Accomplished \n Today"
+            android:gravity="top|center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:paddingTop="15dp"
+            />
+
+        <TextView
+            android:id="@+id/account_rectangle4"
+            android:background="@drawable/custom_account_rectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/account_rectangle2"
+            android:layout_toRightOf="@id/account_rectangle3"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/oregano"
+            android:text="Break Tasks \n\n 3 \n\n Accomplished \n Today"
+            android:gravity="top|center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:paddingTop="15dp"
+            />
 
     </RelativeLayout>
 
