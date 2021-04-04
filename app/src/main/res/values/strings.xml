@@ -12,17 +12,24 @@
     </string-array>
 
     <!--TASKS-->
-    <string name="task1">I am strong.</string>
-    <string name="task2">I believe in myself.</string>
-    <string name="task3">Each day is a new opportunity to grow and be a better version of myself.</string>
-    <string name="task4">Every challenge in my life is an opportunity to learn from.</string>
-    <string name="task5">I have so much to be grateful for.</string>
+    <string name="task1">APT Assignment 1: Milestone 2</string>
+    <string name="task2">Write Essay for History</string>
+    <string name="task3">Break Task</string>
+    <string name="task4">Do Laundry</string>
+    <string name="task5">Read 50 pages of Little Prince</string>
 
     <!--DESCRIPTION-->
-    <string name="description1">I am strong.</string>
-    <string name="description2">I believe in myself.</string>
-    <string name="description3">Each day is a new opportunity to grow and be a better version of myself.</string>
-    <string name="description4">Every challenge in my life is an opportunity to learn from.</string>
-    <string name="description5">I have so much to be grateful for.</string>
+    <string name="description1">Read through the specs for milestone 2.\n\nImplement methods for Node and NodeList classes</string>
+    <string name="description2">150 word essay\n\nTopic: History of Australia Day</string>
+    <string name="description3">accomplish 2 tasks to unlock</string>
+    <string name="description4">Put clothes in washing machine \n\n Hang the clothes \n\n Fold clothes that are already dry</string>
+    <string name="description5">Read chapters 3 and 4</string>
+
+    <!--TIME-->
+    <string name="time1">2 hrs</string>
+    <string name="time2">30 min</string>
+    <string name="time3"></string>
+    <string name="time4">1 hr 15 min</string>
+    <string name="time5">20 min</string>
 
 </resources>

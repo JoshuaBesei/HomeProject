@@ -14,6 +14,7 @@ class ItemAdapter (private val context: Context, private val dataset: List<Tasks
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView = view.findViewById(R.id.item_title)
         val textView1: TextView = view.findViewById(R.id.item_description)
+        val textView2: TextView = view.findViewById(R.id.item_time)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
@@ -26,6 +27,7 @@ class ItemAdapter (private val context: Context, private val dataset: List<Tasks
         val item = dataset[position]
         holder.textView.text =  context.resources.getString(item.stringResourceId)
         holder.textView1.text =  context.resources.getString(item.stringResource1Id)
+        holder.textView2.text =  context.resources.getString(item.stringResource2Id)
     }
 
     override fun getItemCount() = dataset.size

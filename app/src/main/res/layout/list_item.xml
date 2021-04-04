@@ -60,7 +60,7 @@
             android:layout_below="@id/title_rectangle_not_rounded"
             android:layout_alignEnd="@+id/description_box"
             android:layout_alignRight="@+id/description_box"
-            android:hint="Time"
+            android:hint=""
             android:padding="10dp" />
 
         <TextView
