@@ -67,7 +67,7 @@ class AddTasksFragment : Fragment() {
             datePicker?.show()
         })
 
-        val mPickTimeBtn = v.findViewById<Button>(R.id.selectTime)
+        val mPickTimeBtn = v.findViewById<ImageButton>(R.id.selectTime)
         val textView     = v.findViewById<TextView>(R.id.selectedTime)
 
         val hour = mcurrentTime.get(Calendar.HOUR)

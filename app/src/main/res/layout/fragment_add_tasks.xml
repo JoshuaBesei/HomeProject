@@ -98,7 +98,7 @@
             android:background="#FF6200EE"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:src="@drawable/ic_calendar_foreground"
+            app:srcCompat="@drawable/ic_calendar_foreground"
             android:clickable="true" />
 
         <TextView
@@ -106,18 +106,45 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
-            android:textSize="20sp"
-            android:textColor="#000"
-            android:text="00:00"
-            android:layout_below="@id/selectedDate" />
+            android:textSize="22sp"
+            android:text="HH:MM"
+            android:textColor="#DBD8D8"
+            android:layout_below="@id/selectedDate"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="120dp"
+            />
 
-        <Button
+        <ImageButton
             android:id="@+id/selectTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Select Time"
-            android:layout_below="@id/selectDate"
-            android:layout_marginLeft="100dp"/>
+            app:srcCompat="@drawable/ic_time_foreground"
+            android:clickable="true"
+            android:background="#FF6200EE"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_below="@id/selectedDate"
+            android:layout_toRightOf="@id/selectedDate"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/selectedTime"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/custom_rectangle_create_task"
+            android:text="My Task is..."
+            android:gravity="top|left"
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp"
+            android:fontFamily="@font/oregano"
+            android:textSize="25sp"
+            />
+
+
+
     </RelativeLayout>
 
 </FrameLayout>
