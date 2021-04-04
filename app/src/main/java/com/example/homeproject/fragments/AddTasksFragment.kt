@@ -2,6 +2,7 @@ package com.example.homeproject.fragments
 
 import android.app.DatePickerDialog
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -50,13 +51,14 @@ class AddTasksFragment : Fragment() {
             DatePickerDialog(it, object : DatePickerDialog.OnDateSetListener {
                 override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
                     val selectedDate = v.findViewById<TextView>(R.id.selectedDate)
-                    selectedDate.setText(String.format("%d / %d / %d", dayOfMonth, month + 1, year))
+                    selectedDate.setText(String.format("%s %d / %d / %d", "DUE DATE: ", dayOfMonth, month + 1, year))
+                    selectedDate.setTextColor(Color.BLACK)
                 }
             }, year, month, day)
         };
 
 
-        val selectDate = v.findViewById<Button>(R.id.selectDate)
+        val selectDate = v.findViewById<ImageButton>(R.id.selectDate)
         selectDate.setOnClickListener({ v ->
             datePicker?.show()
         })

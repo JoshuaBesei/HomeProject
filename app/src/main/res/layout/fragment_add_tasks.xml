@@ -87,7 +87,8 @@
             android:background="#FF6200EE"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            app:srcCompat="@drawable/ic_calendar_foreground"/>
+            android:src="@drawable/ic_calendar_foreground"
+            android:clickable="true" />
 
         <TextView
             android:id="@+id/selectedDate"
