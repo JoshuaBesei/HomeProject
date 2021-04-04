@@ -10,10 +10,25 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/accomplish_task_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="Completed Tasks" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/oregano"
+            android:text="Accomplished Tasks"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/nothing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/oregano"
+            android:text="~Nothing for now~"
+            android:layout_below="@+id/accomplish_task_title"
+            android:textSize="30dp" />
 
     </RelativeLayout>
 
