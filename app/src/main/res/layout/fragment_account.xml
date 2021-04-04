@@ -41,7 +41,7 @@
             android:layout_toRightOf="@+id/icon_profile"
             android:ems="10"
             android:inputType="text|textCapCharacters"
-            android:text="Full Name"
+            android:hint="Full Name"
             android:layout_marginRight="120dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"/>
@@ -54,7 +54,7 @@
             android:layout_toRightOf="@+id/icon_profile"
             android:ems="10"
             android:inputType="text|textCapCharacters"
-            android:text="Display Name"
+            android:hint="Display Name"
             android:layout_marginRight="120dp"
             android:layout_marginLeft="30dp"
             />
