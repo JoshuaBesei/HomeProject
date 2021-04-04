@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.graphics.Color
 import android.os.Bundle
 import android.text.format.DateFormat.is24HourFormat
@@ -79,8 +80,12 @@ class AddTasksFragment : Fragment() {
             }, hour, minute, true)
         };
         mPickTimeBtn.setOnClickListener({ v ->
+
             timePicker?.show()
+            timePicker?.getButton(DatePickerDialog.BUTTON_NEGATIVE)?.setBackgroundColor(Color.LTGRAY);
+            timePicker?.getButton(DatePickerDialog.BUTTON_POSITIVE)?.setBackgroundColor(Color.BLUE);
         })
+
         return v
     }
 
