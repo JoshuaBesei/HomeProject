@@ -75,7 +75,8 @@ class AddTasksFragment : Fragment() {
         val timePicker = context?.let {
             TimePickerDialog(it, R.style.CustomDatePickerDialog,  object : TimePickerDialog.OnTimeSetListener {
                 override fun onTimeSet(view: TimePicker?, hour: Int, minute: Int) {
-                    textView.setText(String.format("%d : %d", hour, minute))
+                    textView.setText(String.format("%d %s %d %s", hour, "hrs", minute, "min"))
+                    textView.setTextColor(Color.BLACK)
                 }
             }, hour, minute, true)
         };

@@ -6,145 +6,153 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.AddTasksFragment">
 
-    <RelativeLayout
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/new_task_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/oregano"
-            android:text="@string/new_task"
-            android:textSize="40dp" />
-
-        <EditText
-            android:id="@+id/editTextTaskName"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/new_task_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="120dp"
-            android:ems="10"
-            android:inputType="text|textCapCharacters"
-            android:text="Task Name" />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/priority_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/editTextTaskName"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/oregano"
-            android:text="Priority"
-            android:textSize="30dp" />
-
-        <com.google.android.material.button.MaterialButtonToggleGroup
-            android:id="@+id/toggleButtonGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_below="@id/editTextTaskName"
-            android:layout_marginTop="18dp"
-            android:layout_toEndOf="@+id/priority_text"
-            android:layout_toRightOf="@+id/priority_text"
-            app:singleSelection="true">
-
-            <Button
-                android:id="@+id/High"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            <TextView
+                android:id="@+id/new_task_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="High &#9733;"
-                tools:layout_editor_absoluteX="164dp"
-                tools:layout_editor_absoluteY="167dp"
-                />
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/oregano"
+                android:text="@string/new_task"
+                android:textSize="40dp" />
 
-            <Button
-                android:id="@+id/Low"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            <EditText
+                android:id="@+id/editTextTaskName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/new_task_text"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="120dp"
+                android:ems="10"
+                android:inputType="text|textCapCharacters"
+                android:text="Task Name" />
+
+            <TextView
+                android:id="@+id/priority_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Low"
-                tools:layout_editor_absoluteX="164dp"
-                tools:layout_editor_absoluteY="388dp"
+                android:layout_below="@id/editTextTaskName"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/oregano"
+                android:text="Priority"
+                android:textSize="30dp" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleButtonGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_below="@id/editTextTaskName"
+                android:layout_marginTop="18dp"
+                android:layout_toEndOf="@+id/priority_text"
+                android:layout_toRightOf="@+id/priority_text"
+                app:singleSelection="true">
+
+                <Button
+                    android:id="@+id/High"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="High &#9733;"
+                    tools:layout_editor_absoluteX="164dp"
+                    tools:layout_editor_absoluteY="167dp"
+                    />
+
+                <Button
+                    android:id="@+id/Low"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Low"
+                    tools:layout_editor_absoluteX="164dp"
+                    tools:layout_editor_absoluteY="388dp"
+                    />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                android:id="@+id/selectedDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_below="@id/toggleButtonGroup"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="25dp"
+                android:text="Due Date DD-MM-YYYY"
+                android:textColor="#DBD8D8"/>
+
+            <ImageButton
+                android:id="@+id/selectDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/toggleButtonGroup"
+                android:layout_toRightOf="@id/selectedDate"
+                android:background="#FF6200EE"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                app:srcCompat="@drawable/ic_calendar_foreground"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/selectedTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:textSize="22sp"
+                android:text="HH:MM"
+                android:textColor="#DBD8D8"
+                android:layout_below="@id/selectedDate"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="120dp"
                 />
 
-        </com.google.android.material.button.MaterialButtonToggleGroup>
-
-        <TextView
-            android:id="@+id/selectedDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="22sp"
-            android:layout_below="@id/toggleButtonGroup"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="25dp"
-            android:text="Due Date DD-MM-YYYY"
-            android:textColor="#DBD8D8"/>
-
-        <ImageButton
-            android:id="@+id/selectDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@id/toggleButtonGroup"
-            android:layout_toRightOf="@id/selectedDate"
-            android:background="#FF6200EE"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            app:srcCompat="@drawable/ic_calendar_foreground"
-            android:clickable="true" />
-
-        <TextView
-            android:id="@+id/selectedTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:textSize="22sp"
-            android:text="HH:MM"
-            android:textColor="#DBD8D8"
-            android:layout_below="@id/selectedDate"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="120dp"
-            />
-
-        <ImageButton
-            android:id="@+id/selectTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_time_foreground"
-            android:clickable="true"
-            android:background="#FF6200EE"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_below="@id/selectedDate"
-            android:layout_toRightOf="@id/selectedDate"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"/>
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/selectedTime"
-            android:layout_marginTop="30dp"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/custom_rectangle_create_task"
-            android:text="My Task is..."
-            android:gravity="top|left"
-            android:paddingTop="20dp"
-            android:paddingLeft="20dp"
-            android:fontFamily="@font/oregano"
-            android:textSize="25sp"
-            />
+            <ImageButton
+                android:id="@+id/selectTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_time_foreground"
+                android:clickable="true"
+                android:background="#FF6200EE"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_below="@id/selectedDate"
+                android:layout_toRightOf="@id/selectedDate"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"/>
 
 
 
-    </RelativeLayout>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/selectedTime"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/custom_rectangle_create_task"
+                android:text="My Task is..."
+                android:gravity="top|left"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:fontFamily="@font/oregano"
+                android:textSize="25sp"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+
 
 </FrameLayout>
