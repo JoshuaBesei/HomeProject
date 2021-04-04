@@ -157,6 +157,7 @@
             android:text="Most task accomplished today"
             android:textSize="20dp"
             android:textStyle="bold"
+            android:textColor="@color/white"
             />
 
         <ImageView

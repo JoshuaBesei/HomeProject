@@ -20,4 +20,8 @@
         parent="@android:style/Widget.Material.Light.TimePicker">
         <item name="android:timePickerMode">spinner</item>
     </style>
+
+    <style name="spinnerTheme">
+        <item name="android:textColor">@color/purple_500</item>
+    </style>
 </resources>
